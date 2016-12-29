@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<script>
+			var canvas,ctx;
+		window.onload = function(){
+				canvas = document.getElementById('myCanvas');
+				ctx = canvas.getContext('2d');
+				
+				var img = new Image();
+				img.onload = function() {
+					drawImage(img);
+				};
+				img.src = 'C:\Users\hp\Desktop\inlogo.png';
+				
+				var wallpaper = new Image();
+				wallpaper.onload = function() {
+					//drawWallpaper(wallpaper);
+				};
+				wallpaper.src = 'C:\Users\hp\Desktop\inlogo.png';
+				};
+				
+				function drawImage(img) {
+					var destX = 10;
+					var destY = 20;
+					var destWidth = 212;
+					var destHeight = 212;
+					
+					ctx.drawImage(img, destX, destY, destWidth, destHeight);
+				}
+				
+				function drawWallpaper(img) {
+					var pattern = ctx.createPattern(img,'repeat');
+					ctx.fillStyle = pattern;
+					ctx.rect(50, 50, 400, 300);
+					ctx.fill();
+				
+				}
+		</script>
+	</head>
+	<body>
+		<button onclick="showCanvasAsImage()"> Show Canvas As Image </button>
+		<br/>
+	<!-- Step 1 : Define Canvas Element -->
+		<canvas = id="myCanvas" width="800" height="600" style="background-color:#efefef;" />
+	</body>
+</html>

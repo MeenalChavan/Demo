@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<script>
+		window.onload = function(){
+				var canvas = document.getElementById('myCanvas');
+				var ctx = canvas.getContext('2d');
+				
+				ctx.strokeStyle = 'red';
+				ctx.lineWidth = 2;
+				
+				ctx.beginPath();
+				ctx.moveTo(50,50);
+				ctx.quadraticCurveTo(50, 500, 500, 50);
+				ctx.stroke();
+				
+				};
+				
+		</script>
+	</head>
+	<body>
+	<!-- Step 1 : Define Canvas Element -->
+		<canvas = id="myCanvas" width="800" height="600" style="background-color:#efefef;" />
+	</body>
+</html>

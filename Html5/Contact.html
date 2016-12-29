@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	</head>
+	<body>
+    <h1> Form Details </h1>
+	@if (Request.Params.AllKeys.Contains("firstName")){
+		<span id = "result">Details : @Request.Params["firstName"]</span>
+	}
+	else{
+		<span id = "noresult" style= "color:red"></span>
+	}
+    </body>
+</html>

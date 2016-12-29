@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<script>
+		window.onload = function(){
+				var canvas = document.getElementById('myCanvas');
+				var ctx = canvas.getContext('2d');
+				
+				ctx.strokeStyle = 'navy';
+				ctx.fillStyle = 'Yellow';
+				var text = 'Hello World';
+				ctx.font = '40pt Arial';
+				ctx.fillText(text, 50, 50);
+				ctx.strokeText(text, 50, 50);
+				
+				};
+				
+		</script>
+	</head>
+	<body>
+	<!-- Step 1 : Define Canvas Element -->
+		<canvas = id="myCanvas" width="800" height="600" style="background-color:#efefef;" />
+	</body>
+</html>

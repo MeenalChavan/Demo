@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+	
+	
+		<head>
+			<title> Contact Us </title>
+			<link rel="stylesheet" href="contact.css"></link>
+			<!--script language="javascript" type="text/javascript" src="asd.js"></script-->
+		</head>
+		<body>
+			<form id="myForm" height=100% width=50%>
+			
+				<h1 > Contact Us!! </h1> 
+				<div>
+				First Name:<br/>
+					<input type="text" name="firstName" id="fn" placeholder="first name" ><br/>
+				</div>
+				<div>
+				Last Name:<br/>
+					<input type="text" name="lastName" id="ln" placeholder="last name"><br/>
+				</div>
+				<div>
+				E-mail:<br/>
+					<input type="text" name="mailAddress" placeholder="e-mail address"><br/>
+				</div>
+				<div>
+				Message:<br/>
+					<textArea rows="2" cols="50" name="message"></textArea><br/>
+				</div>
+				<div>
+				Sex:
+					<input type="radio" name="gender" value="Male">Male
+					<input type="radio" name="gender" value="Female">Female<br/>
+				</div>
+				<div>
+					<input type="checkbox" name="Updates" checked >I'd liked to receive notices when this website updates.<br/>
+					<input type="checkbox" name="Services">I'd liked to receive notices pertaining to related websites and their services.
+				<br/>
+				</div>
+				<div>
+					<input type="button" value="Submit" onclick="myFunction()">
+				</div>
+			</form>
+			<script>
+			function myFunction() {
+			console.info('In myFunction');
+			var data=document.getElementById("myForm");
+			var user={};
+			for(var i=0;i<(data.length)-1;i++){
+			
+			user[data[i].name] = data[i].value;
+			
+			
+			var myDiv = document.createElement('div');
+			myDiv.innerHTML=""+user[data[i].name];
+			document.getElementById('myForm').appendChild(myDiv);
+			}
+			
+			console.info(user);
+			//return false;
+			}
+</script>
+		</body>
+		
+	
+</html>

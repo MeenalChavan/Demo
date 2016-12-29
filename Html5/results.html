@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Results</title>
+	</head>
+	<body>
+		<h1>Results</h1>
+		@if (Request.Params.AllKeys.Contains("query")){
+		<span id="result"> Search For @Request.Params["query"] </span>
+		}
+		else {
+		 <span id="noresult"> style="color: red"> No result</span>
+		}
+		
+	</body>
+</html>

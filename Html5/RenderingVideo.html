@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<script>
+			var timerId;
+			window.onload = function() {
+			 canvas = document.getElementById('myCanvas');
+			 ctx.canvas.getContext('2d');
+			 
+			 var video = document.getElementById('video');
+			 
+			 video.addEventListener('play', function() {
+				video.currentTime = 10.0;
+				timerId = window.setInterval(function() {
+					ctx.drawImage(video, 5, 5, 270, 125);
+				}, 30);
+			 });
+			 
+			 video.addEventListener('pause', function() {
+				stopTimer();	
+			 });
+			 
+			 video.addEventListener('ended', function() {
+				stopTimer();
+			 });
+			 
+			 };
+			 function stopTimer() {
+				window.clearInterval(timerId);
+			 }
+		</script>
+	</head>
+	<body>
+		Video:
+		<br/>
+		<video id = "video" controls= "true" width = "270" height = "200" autoplay = "true">
+			<source src= "http://www.w3schools.com/html/mov_bbb.mp4" type= 'video/mp4'/>
+		</video>
+		
+		<br/>
+	<!-- Step 1 : Define Canvas Element -->
+		<canvas = id="myCanvas" width="270" height="200"  />
+	</body>
+</html>
